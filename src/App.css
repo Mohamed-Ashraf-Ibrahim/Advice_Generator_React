@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(218, 21%, 31%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--dark-grayish-blue);
+  font-family: "Manrope", sans-serif;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--grayish-blue);
+  width: 35rem;
+  padding: 5rem;
+  gap: 1.5rem;
+  border-radius: 10px;
+  height: 20%;
+}
+
+.advice-number {
+  color: var(--neon-green);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.advice {
+  color: var(--light-cyan);
+  font-size: 29px;
+  text-align: center;
+}
+
+.line {
+  position: absolute;
+  top: 70%;
+}
+
+.line img {
+  margin-top: 10px;
+}
+
+.dice-btn {
+  position: absolute;
+  bottom: -15px;
+  background-color: var(--light-cyan);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.dice-btn:hover {
+  background-color: var(--neon-green);
+}
+
+.dice-btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 70%;
+    /* Adjust width as needed */
+    padding: 4rem;
+    /* Adjust padding as needed */
+    height: auto;
+    /* Set height to auto for responsiveness */
+  }
+
+  .advice {
+    font-size: 1.3rem;
+  }
+
+  .advice-number {
+    font-size: 1em;
+  }
+
+  .line img {
+    width: 20rem;
+    margin-top: 1rem;
+  }
+
+  .dice-btn img {
+    height: 1.5rem;
+  }
+
+  .dice-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
