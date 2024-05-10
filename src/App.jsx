@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../src/images/icon-dice.svg";
 import "../src/App.css";
 
@@ -6,12 +6,18 @@ export default function App() {
   const [advice, setAdvice] = useState("");
   const [adviceId, setAdviceId] = useState("");
 
+  useEffect(() =>{
+    getAdvice()
+  },[])
+
+
   async function getAdvice() {
     try {
       const res = await fetch("https://api.adviceslip.com/advice");
       const data = await res.json();
       setAdvice(data.slip.advice);
       setAdviceId(data.slip.id);
+      
     } catch (err) {
       console.error("Error fetching advice:", err);
     }
@@ -27,6 +33,7 @@ export default function App() {
     </div>
   );
 }
+
 
 function AdviceNumber(props) {
   return (
