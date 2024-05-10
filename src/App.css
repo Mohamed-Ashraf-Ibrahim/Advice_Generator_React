@@ -61,6 +61,7 @@ body {
 .dice-btn {
   position: absolute;
   bottom: -15px;
+  left:46%;
   background-color: var(--light-cyan);
   width: 60px;
   height: 60px;
